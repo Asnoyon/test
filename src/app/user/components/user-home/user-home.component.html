@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row mb-3">
+    <div class="col-xl-12">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [routerLink]="['/user']"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="profile"
+            >Profile</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="isAdmin">
+          <a class="nav-link" routerLinkActive="active" routerLink="users-list"
+            >User List</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
